@@ -15,7 +15,6 @@ function handleSubmit() {
       <nuxt-img
         src="/weight.png"
         alt="Illustration af dreng på en badevægt"
-        loading="lazy"
         class="mx-auto h-64 w-[182px] object-contain"
       />
     </div>

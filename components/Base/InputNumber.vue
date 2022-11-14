@@ -8,7 +8,7 @@ export default {
 
 <template>
   <div
-    class="box-border flex px-3 py-2 mx-auto text-2xl border rounded-lg w-44 focus-within:ring-2"
+    class="box-border flex px-3 py-2 mx-auto text-2xl border-2 border-black rounded-lg w-44 focus-within:ring-4"
   >
     <input
       v-focus

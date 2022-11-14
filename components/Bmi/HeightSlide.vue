@@ -16,7 +16,6 @@ function handleSubmit() {
       <nuxt-img
         src="/height.png"
         alt="Illustration af dreng der måler sin højde"
-        loading="lazy"
         class="mx-auto h-64 w-[182px] object-contain"
       />
     </div>
