@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const emit = defineEmits<{
-  (e: 'valueChange', value: number): void
-}>()
-const weight = ref<number | null>(null)
+  (e: "valueChange", value: number): void;
+}>();
+const weight = ref<number | null>(null);
 
 function handleSubmit() {
-  emit('valueChange', weight.value ?? 0)
+  emit("valueChange", weight.value ?? 0);
 }
 </script>
 
 <template>
   <div class="flex flex-wrap justify-center gap-10">
     <div class="shrink-0 grow-0 basis-[182px]">
-      <nuxt-img
+      <img
         src="/weight.png"
         alt="Illustration af dreng på en badevægt"
         class="mx-auto h-64 w-[182px] object-contain"

@@ -1,51 +1,51 @@
 <script setup lang="ts">
 const props = defineProps<{
-  bmi: number
-}>()
+  bmi: number;
+}>();
 const emit = defineEmits<{
-  (e: 'reset'): void
-}>()
+  (e: "reset"): void;
+}>();
 
-let status: string, color: string, information: string
+let status: string, color: string, information: string;
 
-const formattedBMI = props.bmi.toLocaleString('da-DK', {
+const formattedBMI = props.bmi.toLocaleString("da-DK", {
   maximumFractionDigits: 2,
   minimumFractionDigits: 2,
-})
+});
 
 if (props.bmi < 18.5) {
-  status = 'Undervægtig'
-  color = 'text-blue-700'
+  status = "Undervægtig";
+  color = "text-blue-700";
   information =
     props.bmi < 16
-      ? 'Dit BMI betegnes ifølge Verdenssundhedsorganisationen som alvorlig undervægt.'
-      : ''
+      ? "Dit BMI betegnes ifølge Verdenssundhedsorganisationen som alvorlig undervægt."
+      : "";
 } else if (props.bmi < 25) {
-  status = 'Normalvægtig'
-  color = 'text-green-700'
+  status = "Normalvægtig";
+  color = "text-green-700";
 } else if (props.bmi < 30) {
-  status = 'Overvægtig'
-  color = 'text-yellow-700'
+  status = "Overvægtig";
+  color = "text-yellow-700";
   information =
     props.bmi >= 27
-      ? 'Hvis du har en øget risiko for at udvikle åreforkalkningssygdom, er medicinsk supplerende behandling af vægttab tilrådet.'
-      : ''
+      ? "Hvis du har en øget risiko for at udvikle åreforkalkningssygdom, er medicinsk supplerende behandling af vægttab tilrådet."
+      : "";
 } else {
-  status = 'Svært overvægtig'
-  ;(color = 'text-red-700'),
+  status = "Svært overvægtig";
+  (color = "text-red-700"),
     (information =
-      'Vi anbefales en livsstilsbehandlingen suppleres med medicin.')
+      "Vi anbefales en livsstilsbehandlingen suppleres med medicin.");
 }
 
 function handleSubmit() {
-  emit('reset')
+  emit("reset");
 }
 </script>
 
 <template>
   <div class="flex flex-wrap justify-center gap-10">
     <div class="shrink-0 grow-0 basis-[182px]">
-      <nuxt-img src="/weight.png" alt="Illustration af dreng på en badevægt" />
+      <img src="/weight.png" alt="Illustration af dreng på en badevægt" />
     </div>
     <div class="shrink-0 grow-0 basis-[320px] pt-5">
       <form @submit.prevent="handleSubmit" class="text-center">

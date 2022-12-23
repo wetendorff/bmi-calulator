@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const emit = defineEmits<{
-  (e: 'valueChange', value: number): void
-}>()
+  (e: "valueChange", value: number): void;
+}>();
 
-const height = ref<number | null>(null)
+const height = ref<number | null>(null);
 
 function handleSubmit() {
-  emit('valueChange', height.value ?? 0)
+  emit("valueChange", height.value ?? 0);
 }
 </script>
 
 <template>
   <div class="flex flex-wrap justify-center gap-10">
     <div class="shrink-0 grow-0 basis-[182px]">
-      <nuxt-img
+      <img
         src="/height.png"
         alt="Illustration af dreng der måler sin højde"
         class="mx-auto h-64 w-[182px] object-contain"

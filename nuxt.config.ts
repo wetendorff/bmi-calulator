@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: false,
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image-edge"],
+  modules: ["@nuxtjs/tailwindcss"],
   css: ["@/assets/css/main.css"],
   app: {
     head: {
@@ -13,8 +13,5 @@ export default defineNuxtConfig({
         { name: "description", content: "Beregn dit Body Mass Index (MBI)." },
       ],
     },
-  },
-  image: {
-    dir: "public",
   },
 });
