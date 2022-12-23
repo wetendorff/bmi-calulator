@@ -8,11 +8,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
+    "@nuxt/image-edge": "1.0.0-27840416.dc1ed65",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "nuxt": "3.0.0-rc.13"
   },
-  "dependencies": {
-    "maska": "^1.5.0"
-  }
+  "dependencies": {}
 }
